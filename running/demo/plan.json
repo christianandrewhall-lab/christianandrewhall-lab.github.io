@@ -1,0 +1,1727 @@
+{
+ "race_config": {
+  "athlete": {
+   "name": "Christian",
+   "pr": "2:33:25",
+   "goal_label": "Breaking 2:30",
+   "goal_time": "2:29:59",
+   "goal_pace_mpm": 5.7167,
+   "goal_pace_label": "5:43/mi",
+   "goal_race_id": "stpete",
+   "recent_form": "2:41:43 Grandma's (Jun 2026), 1:17:40 half (Jul 2026), 80–93 mi/wk Aug–Sep. Lab VO2max 53.9 (Aug 2026)."
+  },
+  "races": [
+   {
+    "id": "icebox",
+    "name": "Icebox 480",
+    "short": "Icebox",
+    "date": "2026-11-07",
+    "type": "Race-Ultra",
+    "distance_label": "8-hour",
+    "goal": "Beat 50.4 mi (target 52+)"
+   },
+   {
+    "id": "stpete",
+    "name": "St. Petersburg Marathon",
+    "short": "St. Pete",
+    "date": "2027-02-07",
+    "type": "Race-Road",
+    "distance_label": "Marathon",
+    "goal": "Sub-2:30 (5:43/mi)"
+   },
+   {
+    "id": "birkie",
+    "name": "American Birkebeiner",
+    "short": "Birkie",
+    "date": "2027-02-27",
+    "type": "Race-Ski",
+    "distance_label": "50K ski",
+    "goal": "Enjoy it — post-marathon ski"
+   }
+  ],
+  "physiology": {
+   "vo2max": 53.9,
+   "hr_max": 179,
+   "hr_rest": 47,
+   "vt_hr": 155,
+   "vt_speed_mph": 10.5,
+   "tte_90pct": "8:52 → 9:56 @ 11.1 mph",
+   "vvo2max_mph": 11.8,
+   "vt1_hr_ramp": 124,
+   "vt1_speed_mph_ramp": 8.1,
+   "vt1_note": "Ramp VT1 (V-slope, min 7). Steady-state VT1 about 7:30-7:55/mi, HR ~130-135.",
+   "threshold_pace_label": "5:55-6:05/mi (steady-state estimate; ramp lag inflates speed)",
+   "hr_note": "Zones use lab HRmax 179 (not Strava's 187). Wrist HR is unreliable; use a chest strap. 5K TT 2026-10-10 recalibrates."
+  },
+  "hr_zones": [
+   {
+    "name": "Recovery",
+    "max": 130
+   },
+   {
+    "name": "Easy",
+    "min": 130,
+    "max": 145
+   },
+   {
+    "name": "Steady",
+    "min": 145,
+    "max": 152
+   },
+   {
+    "name": "Threshold",
+    "min": 152,
+    "max": 162
+   },
+   {
+    "name": "VO2",
+    "min": 165
+   }
+  ],
+  "pace_zones": {
+   "Recovery": {
+    "min": 8.25,
+    "max": 10.0,
+    "target": 8.5,
+    "label": "Recovery 8:15+/mi (HR <130)"
+   },
+   "Easy": {
+    "min": 7.4,
+    "max": 8.25,
+    "target": 7.75,
+    "label": "Easy 7:25-8:15/mi (HR 130-145)"
+   },
+   "Moderate": {
+    "min": 6.65,
+    "max": 7.2,
+    "target": 6.9,
+    "label": "Steady 6:40-7:10/mi (HR 145-152)"
+   },
+   "Tempo": {
+    "min": 5.88,
+    "max": 6.1,
+    "target": 5.97,
+    "label": "Threshold 5:55-6:05/mi (HR 152-162)"
+   },
+   "Marathon Pace": {
+    "min": 5.68,
+    "max": 5.9,
+    "target": 5.72,
+    "label": "MP 5:41-5:54/mi"
+   },
+   "VO2Max": {
+    "min": 4.9,
+    "max": 5.3,
+    "target": 5.15,
+    "label": "VO2 5:05-5:15/mi (HR 165+)"
+   },
+   "Long Run": {
+    "min": 6.5,
+    "max": 7.9,
+    "target": 7.2,
+    "label": "Long run 6:30-7:55/mi"
+   },
+   "Race-Road": {
+    "min": 5.3,
+    "max": 6.0,
+    "target": 5.72,
+    "label": "Race pace"
+   },
+   "Race-Trail": {
+    "min": 7.0,
+    "max": 14.0,
+    "target": 10.0,
+    "label": "Trail effort"
+   },
+   "Race-Ultra": {
+    "min": 8.0,
+    "max": 11.0,
+    "target": 9.0,
+    "label": "Ultra pace"
+   }
+  }
+ },
+ "training_plan": [
+  {
+   "date": "2026-10-05",
+   "week": 1,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 6 mi + PM 4 mi easy @ 7:10–7:45/mi (HR < 145). Start of the St. Pete block.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-10-06",
+   "week": 1,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "12 mi easy @ 7:10–7:40/mi + 6×20s strides (relaxed fast, full recovery).",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-10-07",
+   "week": 1,
+   "miles": 10,
+   "effort": "VO2Max",
+   "session": "5K Field Test",
+   "workout": "3 mi WU + 5K time trial all-out on flat road/track + 2 mi CD. Record avg HR & pace — this calibrates the lab zones to the road.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2026-10-08",
+   "week": 1,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "10 mi easy @ 7:30–8:15/mi (HR 130–145). Wear a chest strap — lab HRmax is 179, not 187.",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-10-09",
+   "week": 1,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "10 mi easy @ 7:30–8:15/mi (HR 130–145) + 6×20s strides. Rest legs for tomorrow's test.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-10-10",
+   "week": 1,
+   "miles": 8,
+   "effort": "VO2Max",
+   "session": "5K Time Trial",
+   "workout": "3 mi WU + 5K all-out on a flat road/track + 2 mi CD. Do the 2×30 breaths @ 40% PImax (39 cmH2O) first. Record avg/max HR (chest strap) and pace. Calibrates VDOT and the zones; retest ~2026-12-05.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-10-11",
+   "week": 1,
+   "miles": 18,
+   "effort": "Long Run",
+   "session": "Long Run",
+   "workout": "18 mi @ 7:15–7:45/mi, HR < 145. Steady, no heroics.",
+   "nutrition": "Pre-run: bagel + PB + banana + 16 oz sports drink. During: gel every 40 min + water. Post: 24 oz chocolate milk + full meal within 1 hr."
+  },
+  {
+   "date": "2026-10-12",
+   "week": 2,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 7 + PM 3 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-10-13",
+   "week": 2,
+   "miles": 12,
+   "effort": "VO2Max",
+   "session": "VO2: 6×1K",
+   "workout": "2.5 mi WU + 6×1K @ 5:10–5:15/mi (3:12–3:15/km) w/ 2:30 jog + 2.5 mi CD. HR reaches 165+ by rep 3; peaks 172–178. Do the 2×30 breath warm-up first.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2026-10-14",
+   "week": 2,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-10-15",
+   "week": 2,
+   "miles": 13,
+   "effort": "Tempo",
+   "session": "Cruise Intervals 3×2 mi",
+   "workout": "2.5 mi WU + 3×2 mi @ 5:55–6:00/mi (HR 152–160) w/ 90s jog + 2.5 mi CD.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2026-10-16",
+   "week": 2,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "8 mi very easy @ 8:15+/mi (HR < 130).",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-10-17",
+   "week": 2,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy + Hill Sprints",
+   "workout": "9 mi easy @ 7:30–8:15/mi (HR 130–145) + 8×10s steep hill sprints (walk-back) + 2 mi easy.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-10-18",
+   "week": 2,
+   "miles": 20,
+   "effort": "Long Run",
+   "session": "Long Run",
+   "workout": "20 mi @ 7:00–7:30/mi, HR < 148. Last 2 mi at 6:40.",
+   "nutrition": "Pre-run: oatmeal + honey + coffee. During: practise race gels every 30–40 min. Post: recovery shake + eggs + potatoes. Big carb dinner."
+  },
+  {
+   "date": "2026-10-19",
+   "week": 3,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 7 + PM 3 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-10-20",
+   "week": 3,
+   "miles": 13,
+   "effort": "VO2Max",
+   "session": "VO2: 5×1200m",
+   "workout": "2.5 mi WU + 5×1200m @ 5:08–5:12/mi w/ 3 min jog + 2.5 mi CD. Breath warm-up first.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2026-10-21",
+   "week": 3,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-10-22",
+   "week": 3,
+   "miles": 13,
+   "effort": "Tempo",
+   "session": "Threshold 6 mi",
+   "workout": "2 mi WU + 6 mi continuous @ 5:55–6:00/mi (HR 152–160) + 2 mi CD + PM 3 mi easy.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2026-10-23",
+   "week": 3,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "8 mi very easy (HR < 130).",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2026-10-24",
+   "week": 3,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy + Hill Sprints",
+   "workout": "9 mi easy @ 7:30–8:15/mi (HR 130–145) + 8×10s hill sprints + 2 mi easy.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-10-25",
+   "week": 3,
+   "miles": 20,
+   "effort": "Long Run",
+   "session": "Long Run — Fast Finish",
+   "workout": "20 mi @ 7:00–7:30/mi; last 3 mi @ 6:30. Fuel with what you'll use at Icebox, but this is not a dress rehearsal.",
+   "nutrition": "Pre-run: oatmeal + banana + 20 oz Tailwind. During: 250–300 cal/hr (Tailwind + gels/real food). Post: chocolate milk + full meal."
+  },
+  {
+   "date": "2026-10-26",
+   "week": 4,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 7 + PM 3 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-10-27",
+   "week": 4,
+   "miles": 13,
+   "effort": "VO2Max",
+   "session": "VO2: 4×1 mile",
+   "workout": "3 mi WU + 4×1 mi @ 5:10–5:15/mi w/ 3 min jog + 3 mi CD. Hardest VO2 session before Icebox.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2026-10-28",
+   "week": 4,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "10 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-10-29",
+   "week": 4,
+   "miles": 12,
+   "effort": "Tempo",
+   "session": "Threshold 5 mi",
+   "workout": "2 mi WU + 5 mi @ 5:55–6:00/mi + 2 mi CD + PM 3 mi easy.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2026-10-30",
+   "week": 4,
+   "miles": 6,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "6 mi very easy (HR < 130).",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-10-31",
+   "week": 4,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "8 mi easy @ 7:30–8:15/mi (HR 130–145) + 6×20s strides.",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-11-01",
+   "week": 4,
+   "miles": 16,
+   "effort": "Long Run",
+   "session": "Long Run — Easy",
+   "workout": "16 mi easy @ 7:20–7:50/mi.",
+   "nutrition": "Pre-run: oatmeal + honey + coffee. During: practise race gels every 30–40 min. Post: recovery shake + eggs + potatoes. Big carb dinner."
+  },
+  {
+   "date": "2026-11-02",
+   "week": 5,
+   "miles": 9,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "9 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-11-03",
+   "week": 5,
+   "miles": 11,
+   "effort": "VO2Max",
+   "session": "VO2: 5×1K",
+   "workout": "2.5 mi WU + 5×1K @ 5:10–5:15/mi w/ 2:30 jog + 2 mi CD. Last quality before Icebox — done by Tuesday so legs are fresh enough.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-11-04",
+   "week": 5,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "8 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-11-05",
+   "week": 5,
+   "miles": 6,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "6 mi easy + 4×20s strides.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-11-06",
+   "week": 5,
+   "miles": 4,
+   "effort": "Easy",
+   "session": "Shakeout",
+   "workout": "4 mi easy. Pack gear; keep it simple.",
+   "nutrition": "Dinner by 6 PM: rice/pasta + chicken + bread. Pre-mix Tailwind bottles. Bed by 9 PM."
+  },
+  {
+   "date": "2026-11-07",
+   "week": 5,
+   "miles": 52,
+   "effort": "Race-Ultra",
+   "session": "🧊 ICEBOX 480 — 8 HOUR",
+   "workout": "GOAL: beat 50.4 mi → target 52–54 mi (avg 8:53–9:14/mi incl. stops). Run 8:45–9:00/mi, HR cap 150 for hours 1–4. Walk 1 min every 30 min only if HR drifts. Hours 5–8: hold pace, push the final 60 min. (Fitness race only: no ultra-specific block built into the schedule. VO2max sessions continue in the weeks around it.)",
+   "nutrition": "Pre-race: oatmeal + 2 bananas + coffee + 20 oz Tailwind. During: 250–300 cal/hr + 20–24 oz fluid/hr + salt. Post: 24 oz chocolate milk + full meal."
+  },
+  {
+   "date": "2026-11-08",
+   "week": 5,
+   "miles": 0,
+   "effort": "OFF",
+   "session": "Post-Icebox Rest",
+   "workout": "Complete rest. Walk 20 min if legs allow.",
+   "nutrition": "High-protein recovery day. Tart cherry juice. Rehydrate with electrolytes."
+  },
+  {
+   "date": "2026-11-09",
+   "week": 6,
+   "miles": 0,
+   "effort": "OFF",
+   "session": "REST",
+   "workout": "Complete rest. Post-ultra recovery.",
+   "nutrition": "Rest-day eating: protein at each meal, fewer carbs than training days. Hydrate. Sleep 8+ hrs."
+  },
+  {
+   "date": "2026-11-10",
+   "week": 6,
+   "miles": 4,
+   "effort": "Recovery",
+   "session": "Post-Icebox Day 3",
+   "workout": "4 mi walk/jog @ 9:00+/mi. Only if nothing hurts.",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2026-11-11",
+   "week": 6,
+   "miles": 5,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "5 mi very easy.",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-11-12",
+   "week": 6,
+   "miles": 6,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "6 mi easy.",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-11-13",
+   "week": 6,
+   "miles": 5,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "5 mi very easy.",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-11-14",
+   "week": 6,
+   "miles": 7,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "7 mi easy + 4×20s strides if legs feel normal.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-11-15",
+   "week": 6,
+   "miles": 9,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "9 mi easy. Recovery week done.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-11-16",
+   "week": 7,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "8 mi easy.",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-11-17",
+   "week": 7,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "10 mi easy + 6×20s strides.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-11-18",
+   "week": 7,
+   "miles": 9,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "9 mi easy.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-11-19",
+   "week": 7,
+   "miles": 11,
+   "effort": "Tempo",
+   "session": "First Threshold Back",
+   "workout": "2 mi WU + 4×1 mi @ 5:55/mi w/ 1 min jog + 2 mi CD + 3 mi easy. If legs aren't back, run it easy — no forcing.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2026-11-20",
+   "week": 7,
+   "miles": 7,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "7 mi very easy.",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2026-11-21",
+   "week": 7,
+   "miles": 9,
+   "effort": "Easy",
+   "session": "Easy + Hill Sprints",
+   "workout": "8 mi easy + 6×10s hill sprints + 1 mi.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-11-22",
+   "week": 7,
+   "miles": 15,
+   "effort": "Long Run",
+   "session": "Long Run",
+   "workout": "15 mi @ 7:00–7:30/mi.",
+   "nutrition": "Pre-run: bagel + PB + banana + 16 oz sports drink. During: gel every 40 min + water. Post: 24 oz chocolate milk + full meal within 1 hr."
+  },
+  {
+   "date": "2026-11-23",
+   "week": 8,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 7 + PM 3 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-11-24",
+   "week": 8,
+   "miles": 13,
+   "effort": "VO2Max",
+   "session": "VO2: 5×1K",
+   "workout": "2.5 mi WU + 5×1K @ 5:08–5:12/mi w/ 2:30 jog + 3 mi CD. Breath warm-up first.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2026-11-25",
+   "week": 8,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-11-26",
+   "week": 8,
+   "miles": 11,
+   "effort": "Tempo",
+   "session": "Thanksgiving Threshold",
+   "workout": "Turkey Trot as a controlled threshold effort (HR ≤ 162), OR 2 mi WU + 5 mi @ 5:55/mi + CD to 11 mi.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2026-11-27",
+   "week": 8,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "8 mi very easy (HR < 130).",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-11-28",
+   "week": 8,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy + Hill Sprints",
+   "workout": "10 mi easy @ 7:30–8:15/mi (HR 130–145) + 8×10s hill sprints + 2 mi.",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-11-29",
+   "week": 8,
+   "miles": 20,
+   "effort": "Long Run",
+   "session": "Long Run — Fast Finish",
+   "workout": "20 mi; last 4 @ 6:15–6:25/mi.",
+   "nutrition": "Pre-run: oatmeal + honey + coffee. During: practise race gels every 30–40 min. Post: recovery shake + eggs + potatoes. Big carb dinner."
+  },
+  {
+   "date": "2026-11-30",
+   "week": 9,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 7 + PM 4 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-12-01",
+   "week": 9,
+   "miles": 13,
+   "effort": "VO2Max",
+   "session": "VO2: 4×1600m",
+   "workout": "2.5 mi WU + 4×1600m @ 5:10–5:15/mi w/ 3 min jog + 2.5 mi CD.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2026-12-02",
+   "week": 9,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run + First Ski",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145) (a ski can replace the PM run).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-12-03",
+   "week": 9,
+   "miles": 13,
+   "effort": "Tempo",
+   "session": "Cruise Intervals 3×3 mi",
+   "workout": "2 mi WU + 3×3 mi @ 5:55–5:58/mi (HR 152–160) w/ 2 min jog + 2 mi CD.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2026-12-04",
+   "week": 9,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "8 mi very easy (HR < 130).",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2026-12-05",
+   "week": 9,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "12 mi easy @ 7:30–8:15/mi (HR 130–145) + 6×20s strides.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-12-06",
+   "week": 9,
+   "miles": 22,
+   "effort": "Long Run",
+   "session": "Long Run — MP Touch",
+   "workout": "22 mi; miles 15–18 @ 5:55–6:00/mi, then easy.",
+   "nutrition": "Pre-run: bagel + PB + banana + 16 oz sports drink. During: gel every 40 min + water. Post: 24 oz chocolate milk + full meal within 1 hr."
+  },
+  {
+   "date": "2026-12-07",
+   "week": 10,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145). Sat 12-05 or this week: repeat the 5K time trial.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-12-08",
+   "week": 10,
+   "miles": 13,
+   "effort": "VO2Max",
+   "session": "VO2: 6×1K",
+   "workout": "2.5 mi WU + 6×1K @ 5:05–5:10/mi w/ 2 min jog + 2.5 mi CD. Breath warm-up first.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2026-12-09",
+   "week": 10,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-12-10",
+   "week": 10,
+   "miles": 14,
+   "effort": "Tempo",
+   "session": "Threshold 7 mi",
+   "workout": "2 mi WU + 7 mi @ 5:55/mi (HR 152–160) + 2 mi CD + PM 3 mi easy.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2026-12-11",
+   "week": 10,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "8 mi very easy (HR < 130).",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-12-12",
+   "week": 10,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy + Hill Sprints",
+   "workout": "10 mi easy @ 7:30–8:15/mi (HR 130–145) + 8×10s hill sprints + 2 mi.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-12-13",
+   "week": 10,
+   "miles": 23,
+   "effort": "Long Run",
+   "session": "Progression Long Run",
+   "workout": "23 mi: start 7:15/mi, last 4 @ 6:05–6:10/mi.",
+   "nutrition": "Pre-run: oatmeal + honey + coffee. During: practise race gels every 30–40 min. Post: recovery shake + eggs + potatoes. Big carb dinner."
+  },
+  {
+   "date": "2026-12-14",
+   "week": 11,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-12-15",
+   "week": 11,
+   "miles": 13,
+   "effort": "VO2Max",
+   "session": "Speed: 3×(4×400m)",
+   "workout": "3 mi WU + 3 sets of 4×400m @ 4:55–5:00/mi w/ 200m jog, 4 min between sets + 3 mi CD. Economy + top end.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2026-12-16",
+   "week": 11,
+   "miles": 11,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "11 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-12-17",
+   "week": 11,
+   "miles": 14,
+   "effort": "Tempo",
+   "session": "Cruise Intervals 4×2 mi",
+   "workout": "2 mi WU + 4×2 mi @ 5:48–5:52/mi w/ 90s jog + 3 mi CD + PM 1 mi.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2026-12-18",
+   "week": 11,
+   "miles": 9,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "9 mi very easy (HR < 130).",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2026-12-19",
+   "week": 11,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy Run + Long Ski",
+   "workout": "12 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-12-20",
+   "week": 11,
+   "miles": 22,
+   "effort": "Long Run",
+   "session": "Long Run w/ Steady Blocks",
+   "workout": "22 mi with 3×3 mi @ 6:00/mi (last block 5:50), 1 mi easy between.",
+   "nutrition": "Pre-run: bagel + PB + banana + 16 oz sports drink. During: gel every 40 min + water. Post: 24 oz chocolate milk + full meal within 1 hr."
+  },
+  {
+   "date": "2026-12-21",
+   "week": 12,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Peak Block 1 — Easy Double",
+   "workout": "AM 8 + PM 4 mi easy @ 7:30–8:15/mi (HR 130–145). Peak block starts: Dec 21 → Jan 17, ~100 mi weeks like Mar 2024. Ramp, don't jump.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2026-12-22",
+   "week": 12,
+   "miles": 14,
+   "effort": "VO2Max",
+   "session": "VO2: 5×1200m",
+   "workout": "2 mi WU + 5×1200m @ 5:05–5:08/mi w/ 3 min jog + 2 mi CD + PM 3 mi easy.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2026-12-23",
+   "week": 12,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 8 + PM 4 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2026-12-24",
+   "week": 12,
+   "miles": 15,
+   "effort": "Tempo",
+   "session": "Threshold 6 mi",
+   "workout": "3 mi WU + 6 mi @ 5:50/mi + 3 mi CD + PM 3 mi easy.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2026-12-25",
+   "week": 12,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "Christmas Recovery",
+   "workout": "8 mi very easy (HR < 130). Merry Christmas.",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2026-12-26",
+   "week": 12,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy Run + Long Ski",
+   "workout": "12 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-12-27",
+   "week": 12,
+   "miles": 22,
+   "effort": "Long Run",
+   "session": "Long Run — Easy",
+   "workout": "22 mi @ 7:00–7:20/mi.",
+   "nutrition": "Pre-run: oatmeal + honey + coffee. During: practise race gels every 30–40 min. Post: recovery shake + eggs + potatoes. Big carb dinner."
+  },
+  {
+   "date": "2026-12-28",
+   "week": 13,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Peak Block 2 — Easy Double",
+   "workout": "AM 8 + PM 4 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2026-12-29",
+   "week": 13,
+   "miles": 14,
+   "effort": "VO2Max",
+   "session": "VO2 + MP Combo",
+   "workout": "3 mi WU + 5×1K @ 5:05/mi w/ 2 min jog, 3 min rest, then 2 mi @ 5:43/mi + 2 mi CD. Goal pace on tired legs.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2026-12-30",
+   "week": 13,
+   "miles": 12,
+   "effort": "Easy",
+   "session": "Easy Double",
+   "workout": "AM 8 + PM 4 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2026-12-31",
+   "week": 13,
+   "miles": 16,
+   "effort": "Marathon Pace",
+   "session": "MP 10 mi",
+   "workout": "2 mi WU + 10 mi @ 5:45–5:50/mi (HR ≤ 160) + 2 mi CD + PM 2 mi.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2027-01-01",
+   "week": 13,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "New Year Recovery",
+   "workout": "8 mi very easy (HR < 130).",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2027-01-02",
+   "week": 13,
+   "miles": 13,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "13 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2027-01-03",
+   "week": 13,
+   "miles": 24,
+   "effort": "Long Run",
+   "session": "Progression Long Run",
+   "workout": "24 mi; start 7:10/mi, last 4 @ 6:05/mi. Race-day fueling.",
+   "nutrition": "Pre-run: bagel + PB + banana + 16 oz sports drink. During: gel every 40 min + water. Post: 24 oz chocolate milk + full meal within 1 hr."
+  },
+  {
+   "date": "2027-01-04",
+   "week": 14,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "10 mi easy. Cut-back week inside the peak block (half tune-up Sunday).",
+   "ski": "Ski 45 min easy classic/skate (HR < 145). Technique focus.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2027-01-05",
+   "week": 14,
+   "miles": 11,
+   "effort": "VO2Max",
+   "session": "VO2: 5×1K",
+   "workout": "2.5 mi WU + 5×1K @ 5:05/mi w/ 2 min jog + 2.5 mi CD.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2027-01-06",
+   "week": 14,
+   "miles": 9,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "9 mi easy.",
+   "ski": "Ski 40 min easy classic/skate (HR < 145). Technique focus.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2027-01-07",
+   "week": 14,
+   "miles": 9,
+   "effort": "Tempo",
+   "session": "Pre-Race Threshold",
+   "workout": "2 mi WU + 3 mi @ 5:40/mi + 2 mi CD + 4×20s strides.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2027-01-08",
+   "week": 14,
+   "miles": 7,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "7 mi easy + 4×20s strides.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2027-01-09",
+   "week": 14,
+   "miles": 5,
+   "effort": "Easy",
+   "session": "Shakeout",
+   "workout": "5 mi easy + 4×15s strides. No ski — race tomorrow.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2027-01-10",
+   "week": 14,
+   "miles": 16,
+   "effort": "Race-Road",
+   "session": "🏁 HALF MARATHON TUNE-UP",
+   "workout": "3 mi WU + 13.1 mi all-out. GO/NO-GO: ≤ 1:12:30 → keep sub-2:30 (5:43/mi). 1:12:31–1:14:00 → target 2:31–2:33 (PR). > 1:14:00 → reassess goal.",
+   "nutrition": "3 hrs pre: bagel + honey + banana + coffee. 30 min pre: 1 gel. Post: 24 oz chocolate milk + full meal."
+  },
+  {
+   "date": "2027-01-11",
+   "week": 15,
+   "miles": 8,
+   "effort": "Recovery",
+   "session": "Post-Half Recovery",
+   "workout": "8 mi very easy (HR < 130).",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2027-01-12",
+   "week": 15,
+   "miles": 13,
+   "effort": "Easy",
+   "session": "Easy + Strides",
+   "workout": "13 mi easy @ 7:30–8:15/mi (HR 130–145) + 6×20s strides.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2027-01-13",
+   "week": 15,
+   "miles": 14,
+   "effort": "Easy",
+   "session": "Peak Block 4 — Easy Double",
+   "workout": "AM 9 + PM 5 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2027-01-14",
+   "week": 15,
+   "miles": 15,
+   "effort": "Marathon Pace",
+   "session": "MP 2×5 mi",
+   "workout": "2 mi WU + 2×5 mi @ 5:42–5:45/mi w/ 1 mi float @ 6:30 + 2 mi CD + PM 2 mi.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2027-01-15",
+   "week": 15,
+   "miles": 9,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "9 mi very easy (HR < 130).",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2027-01-16",
+   "week": 15,
+   "miles": 13,
+   "effort": "Easy",
+   "session": "Easy Run + Ski",
+   "workout": "13 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2027-01-17",
+   "week": 15,
+   "miles": 24,
+   "effort": "Long Run",
+   "session": "Long Run — MP Finish",
+   "workout": "24 mi: 16 mi easy @ 7:00/mi, then 8 mi @ 5:50–5:55/mi. Last big session of the block.",
+   "nutrition": "Pre-run: bagel + PB + banana + 16 oz sports drink. During: gel every 40 min + water. Post: 24 oz chocolate milk + full meal within 1 hr."
+  },
+  {
+   "date": "2027-01-18",
+   "week": 16,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Taper 1 — Easy Run",
+   "workout": "10 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2027-01-19",
+   "week": 16,
+   "miles": 12,
+   "effort": "VO2Max",
+   "session": "VO2: 4×1 mile",
+   "workout": "3 mi WU + 4×1 mi @ 5:05–5:10/mi w/ 3 min jog + 3 mi CD. Last big VO2 stimulus.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2027-01-20",
+   "week": 16,
+   "miles": 9,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "9 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2027-01-21",
+   "week": 16,
+   "miles": 11,
+   "effort": "Tempo",
+   "session": "Cruise Intervals @ Goal+",
+   "workout": "2 mi WU + 3×2 mi @ 5:38–5:42/mi w/ 1 min jog + 3 mi CD.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2027-01-22",
+   "week": 16,
+   "miles": 6,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "6 mi very easy (HR < 130).",
+   "nutrition": "Light breakfast, protein-forward lunch. Dinner: salmon + sweet potato. Magnesium before bed."
+  },
+  {
+   "date": "2027-01-23",
+   "week": 16,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "8 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2027-01-24",
+   "week": 16,
+   "miles": 21,
+   "effort": "Marathon Pace",
+   "session": "THE KEY WORKOUT — 14 mi @ Goal Pace",
+   "workout": "3 mi WU + 14 mi @ 5:43/mi + 4 mi CD. Full race kit and fueling. Go/no-go confirmation for 2:30.",
+   "nutrition": "Exact race-morning breakfast 3 hrs pre. Gels at mi 5, 10, 15. Post: 24 oz chocolate milk + big meal."
+  },
+  {
+   "date": "2027-01-25",
+   "week": 17,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Taper 2 — Easy Run",
+   "workout": "8 mi easy @ 7:30–8:15/mi (HR 130–145).",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2027-01-26",
+   "week": 17,
+   "miles": 10,
+   "effort": "VO2Max",
+   "session": "VO2: 5×1K",
+   "workout": "2 mi WU + 5×1K @ 5:05/mi w/ 2 min jog + 2 mi CD.",
+   "nutrition": "Pre-run: oatmeal + maple syrup. Post: chocolate milk + bagel. Dinner: stir-fry + noodles + shrimp. Iron-rich side (spinach)."
+  },
+  {
+   "date": "2027-01-27",
+   "week": 17,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy Run + Sauna",
+   "workout": "8 mi easy. 20 min sauna after (heat acclimation for Florida).",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2027-01-28",
+   "week": 17,
+   "miles": 10,
+   "effort": "Marathon Pace",
+   "session": "Heat MP Rehearsal",
+   "workout": "2 mi WU + 6 mi @ 5:43/mi on treadmill in a warm room (75°F+), 1% grade + 2 mi CD. Heat acclimation + fueling.",
+   "nutrition": "Pre-run: toast + jam + banana. Post: whey + banana + 16 oz sports drink. Dinner: rice bowl + salmon + veg. Prioritise carbs — quality day."
+  },
+  {
+   "date": "2027-01-29",
+   "week": 17,
+   "miles": 5,
+   "effort": "Recovery",
+   "session": "Recovery + Sauna",
+   "workout": "5 mi very easy. 25 min sauna.",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2027-01-30",
+   "week": 17,
+   "miles": 6,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "6 mi easy. Optional 30 min easy ski.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2027-01-31",
+   "week": 17,
+   "miles": 14,
+   "effort": "Long Run",
+   "session": "Long Run — Last 3 @ MP",
+   "workout": "14 mi easy, last 3 @ 5:43/mi.",
+   "nutrition": "Pre-run: bagel + PB + banana + 16 oz sports drink. During: gel every 40 min + water. Post: 24 oz chocolate milk + full meal within 1 hr."
+  },
+  {
+   "date": "2027-02-01",
+   "week": 18,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy Run + Sauna",
+   "workout": "8 mi easy + 20 min sauna. No skiing race week.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2027-02-02",
+   "week": 18,
+   "miles": 9,
+   "effort": "Marathon Pace",
+   "session": "Race-Week Sharpener",
+   "workout": "2 mi WU + 3×1 mi @ 5:40/mi w/ 2 min jog + 2 mi CD.",
+   "nutrition": "Pre-run (90 min): bagel + honey + coffee. During: water. Post: 24 oz chocolate milk within 30 min. Dinner: pasta + chicken + salad. Carbs 6–7 g/kg today."
+  },
+  {
+   "date": "2027-02-03",
+   "week": 18,
+   "miles": 7,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "7 mi easy. Begin carb-load tomorrow.",
+   "nutrition": "Breakfast: Greek yogurt + granola + banana. Post-run: smoothie (whey + fruit). Dinner: salmon + potatoes + greens."
+  },
+  {
+   "date": "2027-02-04",
+   "week": 18,
+   "miles": 6,
+   "effort": "Easy",
+   "session": "Easy + Strides — Travel",
+   "workout": "6 mi easy + 4×20s strides. Travel to St. Petersburg.",
+   "nutrition": "Carb-load day 1: 8–10 g/kg (~700 g). Rice, bagels, pasta, sports drink. Low fibre."
+  },
+  {
+   "date": "2027-02-05",
+   "week": 18,
+   "miles": 4,
+   "effort": "Easy",
+   "session": "Shakeout",
+   "workout": "4 mi easy. Check the course start/finish.",
+   "nutrition": "Carb-load day 2: 8–10 g/kg. Salt foods. Hydrate with electrolytes — Florida humidity."
+  },
+  {
+   "date": "2027-02-06",
+   "week": 18,
+   "miles": 3,
+   "effort": "Easy",
+   "session": "Race Eve — Shakeout",
+   "workout": "3 mi easy + 4×15s strides in race shoes. Lay out kit. Check forecast: if > 65°F at start, adjust goal +5–10 s/mi.",
+   "nutrition": "Dinner by 5:30 PM: white rice + chicken + bread. Pack gels. Bed by 9 PM."
+  },
+  {
+   "date": "2027-02-07",
+   "week": 18,
+   "miles": 26.2,
+   "effort": "Race-Road",
+   "session": "🏆 ST. PETERSBURG MARATHON — SUB-2:30",
+   "workout": "TARGET: Sub-2:30 @ 5:43/mi. Splits: 10K 35:31 | Half 1:14:56 | 20 mi 1:54:20 | Finish 2:29:53. Miles 1–3 at 5:45 to settle; lock 5:43 to 20; race the last 10K. Flat course — wind off the bay is the variable.",
+   "nutrition": "3 hrs pre: bagel + honey + banana + 20 oz sports drink + coffee. 15 min pre: 1 gel. Race: gel at mi 5, 10, 15, 20 + water every station. Post: 24 oz chocolate milk."
+  },
+  {
+   "date": "2027-02-08",
+   "week": 19,
+   "miles": 0,
+   "effort": "OFF",
+   "session": "REST — Travel Home",
+   "workout": "Complete rest. Celebrate.",
+   "nutrition": "Rest-day eating: protein at each meal, fewer carbs than training days. Hydrate. Sleep 8+ hrs."
+  },
+  {
+   "date": "2027-02-09",
+   "week": 19,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Easy Ski",
+   "workout": "No running.",
+   "ski": "Ski 45 min very easy. Low-impact marathon recovery.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-10",
+   "week": 19,
+   "miles": 4,
+   "effort": "Recovery",
+   "session": "Recovery Jog",
+   "workout": "4 mi walk/jog. Only if nothing hurts.",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2027-02-11",
+   "week": 19,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Easy Ski",
+   "workout": "No running.",
+   "ski": "Ski 60 min easy.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-12",
+   "week": 19,
+   "miles": 5,
+   "effort": "Recovery",
+   "session": "Recovery Run",
+   "workout": "5 mi very easy.",
+   "nutrition": "Normal balanced meals. Extra protein (1.8 g/kg). Tart cherry juice. Hydrate + electrolytes."
+  },
+  {
+   "date": "2027-02-13",
+   "week": 19,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Long Easy Ski",
+   "workout": "No running.",
+   "ski": "Ski 2 hr easy in Birkie technique. Birkie in 2 weeks.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-14",
+   "week": 19,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "8 mi easy.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2027-02-15",
+   "week": 20,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Easy Ski",
+   "workout": "No running.",
+   "ski": "Ski 60 min easy.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-16",
+   "week": 20,
+   "miles": 7,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "7 mi easy.",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2027-02-17",
+   "week": 20,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Ski Threshold",
+   "workout": "No running.",
+   "ski": "Ski 75 min: 15 min easy + 5×4 min @ threshold (HR 152–160) w/ 2 min easy + easy to finish.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-18",
+   "week": 20,
+   "miles": 8,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "8 mi easy.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2027-02-19",
+   "week": 20,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Easy Ski",
+   "workout": "No running.",
+   "ski": "Ski 60 min easy. Test race wax.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-20",
+   "week": 20,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Birkie Dress Rehearsal",
+   "workout": "No running.",
+   "ski": "Ski 2.5 hr easy-steady. Practise Birkie fueling (feed every 30–40 min) and race kit.",
+   "nutrition": "Ski fuel: oatmeal + coffee before. Bring warm sports drink in an insulated bottle. Post: chocolate milk + full meal."
+  },
+  {
+   "date": "2027-02-21",
+   "week": 20,
+   "miles": 10,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "10 mi easy.",
+   "nutrition": "Breakfast: bagel + PB + banana. Post-run: recovery shake. Dinner: turkey chili + cornbread."
+  },
+  {
+   "date": "2027-02-22",
+   "week": 21,
+   "miles": 6,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "6 mi easy.",
+   "nutrition": "Breakfast: oatmeal + berries + 2 eggs. Post-run: 12 oz chocolate milk. Dinner: chicken + rice + roasted veg."
+  },
+  {
+   "date": "2027-02-23",
+   "week": 21,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Ski Sharpener",
+   "workout": "No running.",
+   "ski": "Ski 60 min with 4×3 min @ race effort w/ 3 min easy.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-24",
+   "week": 21,
+   "miles": 6,
+   "effort": "Easy",
+   "session": "Easy Run",
+   "workout": "6 mi easy + 4×15s strides.",
+   "nutrition": "Breakfast: 2 eggs + whole-wheat toast + OJ. Post-run: chocolate milk. Dinner: lean beef tacos + beans + rice."
+  },
+  {
+   "date": "2027-02-25",
+   "week": 21,
+   "miles": 0,
+   "effort": "Ski",
+   "session": "Easy Ski",
+   "workout": "No running.",
+   "ski": "Ski 40 min easy. Final wax decision.",
+   "nutrition": "Pre-ski: toast + PB + banana. Post: soup + sandwich + recovery shake. Hydrate — cold air hides fluid loss."
+  },
+  {
+   "date": "2027-02-26",
+   "week": 21,
+   "miles": 0,
+   "effort": "OFF",
+   "session": "REST — Travel to Hayward",
+   "workout": "Complete rest. Pick up bib, wax skis, check start wave.",
+   "nutrition": "Dinner: pasta + chicken + bread. Pre-mix warm sports drink. Bed early."
+  },
+  {
+   "date": "2027-02-27",
+   "week": 21,
+   "miles": 0,
+   "effort": "Race-Ski",
+   "session": "⛷️ AMERICAN BIRKEBEINER",
+   "workout": "50K ski. No running. Start controlled — the first 12K climbs. Enjoy the end of the season.",
+   "nutrition": "Pre-race: oatmeal + banana + coffee. Feed at every station: warm sports drink + gel. Post: chocolate milk + full meal."
+  },
+  {
+   "date": "2027-02-28",
+   "week": 21,
+   "miles": 0,
+   "effort": "OFF",
+   "session": "Season Complete",
+   "workout": "Complete rest. Season done.",
+   "nutrition": "Rest-day eating: protein at each meal, fewer carbs than training days. Hydrate. Sleep 8+ hrs."
+  }
+ ],
+ "strength_schedule": {
+  "sessions": {
+   "A": {
+    "name": "Lower Body Power + Core",
+    "blocks": [
+     {
+      "title": "Activation — 5 min (always first)",
+      "exercises": [
+       {
+        "name": "Glute Bridge",
+        "sets": "2×15",
+        "note": "Activates glutes pre-load — reduces knee valgus under fatigue at mile 20+"
+       },
+       {
+        "name": "Lateral Band Walk",
+        "sets": "2×12/side",
+        "note": "Hip abductor activation; prevents IT band syndrome in high-mileage blocks"
+       },
+       {
+        "name": "Single-Leg Calf Raise",
+        "sets": "2×12/side",
+        "note": "Eccentric-focused. Achilles tendon health is critical at 100 mi/week"
+       }
+      ]
+     },
+     {
+      "title": "Main Strength — 20 min",
+      "exercises": [
+       {
+        "name": "Bulgarian Split Squat",
+        "sets": "3×6 (heavy)",
+        "note": "Primary running economy driver (Beattie 2017). 70–80% 1RM. Single-leg = sport-specific loading"
+       },
+       {
+        "name": "Romanian Deadlift",
+        "sets": "3×6 (heavy)",
+        "note": "Posterior chain strength. Reduces hamstring strain risk, improves stride power"
+       },
+       {
+        "name": "Weighted Step-Up",
+        "sets": "3×8/side",
+        "note": "Addresses L/R asymmetry. Hip drive pattern mirrors running propulsion"
+       },
+       {
+        "name": "Hip Thrust",
+        "sets": "3×8 (heavy)",
+        "note": "Max glute strength. Directly improves ground propulsion — critical at goal marathon pace"
+       }
+      ]
+     },
+     {
+      "title": "Plyometrics — 8 min",
+      "exercises": [
+       {
+        "name": "Box Jump",
+        "sets": "3×5",
+        "note": "High-quality reps only. 6 wks improves RE 4.5% (Saunders 2006). Drop 20% in taper."
+       },
+       {
+        "name": "Single-Leg Hop + Stick",
+        "sets": "3×5/side",
+        "note": "Reactive strength + landing mechanics. Reduces overstriding injury risk"
+       }
+      ]
+     },
+     {
+      "title": "Core Anti-Rotation — 7 min",
+      "exercises": [
+       {
+        "name": "Pallof Press",
+        "sets": "3×10/side",
+        "note": "Anti-rotation core = reduced lateral sway = better economy at race pace"
+       },
+       {
+        "name": "Dead Bug",
+        "sets": "3×8/side",
+        "note": "Lumbo-pelvic control under fatigue — what fails at mile 22"
+       },
+       {
+        "name": "Side Plank + Hip Abduction",
+        "sets": "2×30s/side",
+        "note": "Glute med prevents Trendelenburg gait pattern in late marathon miles"
+       }
+      ]
+     }
+    ],
+    "rationale": "Session A targets posterior chain and single-leg power — primary drivers of running economy. Heavy loading ≥70% 1RM over 6+ weeks produces neuromuscular adaptations improving RE by 3–8% without significant muscle mass gains."
+   },
+   "B": {
+    "name": "Upper Body + Deep Core + Mobility",
+    "blocks": [
+     {
+      "title": "Upper Body Pulling — 15 min",
+      "exercises": [
+       {
+        "name": "Pull-Up or Lat Pulldown",
+        "sets": "3×8",
+        "note": "Arm swing power. Strong lats reduce upper body fatigue at mile 20+"
+       },
+       {
+        "name": "Single-Arm Dumbbell Row",
+        "sets": "3×10/side",
+        "note": "Scapular stability. Prevents shoulder rounding under marathon fatigue"
+       },
+       {
+        "name": "Face Pull",
+        "sets": "3×15",
+        "note": "Rotator cuff health; counters forward head posture that develops late in races"
+       }
+      ]
+     },
+     {
+      "title": "Core Stability Complex — 15 min",
+      "exercises": [
+       {
+        "name": "Front Plank (ISO)",
+        "sets": "3×45s",
+        "note": "Trunk stiffness = better force transfer from glutes to ground"
+       },
+       {
+        "name": "Copenhagen Plank",
+        "sets": "3×20s/side",
+        "note": "Adductor strength. Underrated injury prevention for high-mileage runners"
+       },
+       {
+        "name": "Hollow Body Hold",
+        "sets": "3×30s",
+        "note": "Anterior core engagement critical for maintaining posture at goal marathon pace"
+       },
+       {
+        "name": "Russian Twist (med ball)",
+        "sets": "3×12/side",
+        "note": "Rotational core endurance"
+       }
+      ]
+     },
+     {
+      "title": "Hip Mobility + Flexibility — 10 min",
+      "exercises": [
+       {
+        "name": "90/90 Hip Stretch",
+        "sets": "2×60s/side",
+        "note": "Hip capsule mobility. Reduces hip flexor strain from daily high mileage"
+       },
+       {
+        "name": "Pigeon Pose",
+        "sets": "2×60s/side",
+        "note": "External hip rotation — critical for long run recovery"
+       },
+       {
+        "name": "World's Greatest Stretch",
+        "sets": "2×5/side",
+        "note": "Thoracic rotation + hip flexor + hamstring — full-body compound mobility"
+       },
+       {
+        "name": "Soleus Stretch (bent knee)",
+        "sets": "2×60s/side",
+        "note": "Targets Achilles insertion — most injury-prone site in marathon runners"
+       }
+      ]
+     }
+    ],
+    "rationale": "Session B balances the posterior-chain work of A with upper body pulling, deep core stability, and critical mobility. Marathon arm mechanics reduce whole-body energy cost ~5% — upper body strength is the most commonly neglected element."
+   },
+   "C": {
+    "name": "Explosive Lower + Foot/Ankle",
+    "blocks": [
+     {
+      "title": "Foot & Ankle — 5 min (always first)",
+      "exercises": [
+       {
+        "name": "Eccentric Calf Raise (4s down)",
+        "sets": "3×12/leg",
+        "note": "4s eccentric, 1s up. Gold standard for Achilles tendinopathy prevention (Alfredson protocol)"
+       },
+       {
+        "name": "Banded Dorsiflexion",
+        "sets": "2×15/side",
+        "note": "Ankle ROM limits stride efficiency if restricted — especially in faster paces"
+       }
+      ]
+     },
+     {
+      "title": "Explosive Strength — 20 min",
+      "exercises": [
+       {
+        "name": "Trap Bar Deadlift (heavy)",
+        "sets": "4×4 (80%+ 1RM)",
+        "note": "Highest running economy impact per exercise. Heavy = neuromuscular, not hypertrophy. Sprint form cues."
+       },
+       {
+        "name": "Jump Squat (light load)",
+        "sets": "4×5",
+        "note": "Rate of force development — slows at mile 20. Counteracts ground contact time increases."
+       },
+       {
+        "name": "Bounding",
+        "sets": "3×20m",
+        "note": "Horizontal power + ground contact time. 6 wks: 3–5% RE improvement"
+       }
+      ]
+     },
+     {
+      "title": "Posterior Chain Accessory — 10 min",
+      "exercises": [
+       {
+        "name": "Nordic Hamstring Curl",
+        "sets": "3×6",
+        "note": "Gold standard for hamstring injury prevention. Eccentric strength at long muscle lengths."
+       },
+       {
+        "name": "Glute Ham Raise",
+        "sets": "3×8",
+        "note": "Hip extension power at faster paces — key for a fast finishing kick"
+       }
+      ]
+     },
+     {
+      "title": "Core Power — 5 min",
+      "exercises": [
+       {
+        "name": "Med Ball Slam",
+        "sets": "3×8",
+        "note": "Total body power + stress relief. Full reset for the CNS."
+       },
+       {
+        "name": "Hanging Leg Raise",
+        "sets": "3×10",
+        "note": "Hip flexor strength for high knee lift — degrades at race mile 22+"
+       }
+      ]
+     }
+    ],
+    "rationale": "Session C emphasizes explosive work and heavy deadlifts — the two interventions with strongest evidence for improving RE in well-trained runners. Reduce volume 40% in taper (Wks 9–11). Skip entirely in race weeks."
+   }
+  },
+  "get_day_session_rules": {
+   "race_weeks_5_18": "activation Mon only",
+   "no_lifting_weeks": "6, 19+",
+   "taper_weeks_4_17": "no Friday",
+   "default_map": {
+    "1": "A",
+    "3": "B",
+    "5": "C"
+   }
+  }
+ }
+}

@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christian Hall — Engineer</title>
+<meta name="description" content="Engineering tools built by Christian Hall: linkage synthesis, machine stability analysis, and a marathon training platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --surface-alt: #efede6;
+    --text: #17181a;
+    --muted: #5e6166;
+    --faint: #8d9096;
+    --border: #e1ded5;
+    --accent: #2f5bea;
+    --accent-soft: #e6ecfd;
+    --live: #1f8a4c;
+    --live-soft: #e3f3e9;
+    --warn: #a3620a;
+    --warn-soft: #fbf0dc;
+    --shadow: 0 1px 2px rgba(20, 20, 20, .04), 0 8px 24px rgba(20, 20, 20, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111214;
+      --surface: #191a1d;
+      --surface-alt: #212226;
+      --text: #ececea;
+      --muted: #a2a5ab;
+      --faint: #74777d;
+      --border: #2c2d31;
+      --accent: #7d9bff;
+      --accent-soft: #1d2540;
+      --live: #4cc47e;
+      --live-soft: #15281d;
+      --warn: #e0a54a;
+      --warn-soft: #2b2214;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111214;
+    --surface: #191a1d;
+    --surface-alt: #212226;
+    --text: #ececea;
+    --muted: #a2a5ab;
+    --faint: #74777d;
+    --border: #2c2d31;
+    --accent: #7d9bff;
+    --accent-soft: #1d2540;
+    --live: #4cc47e;
+    --live-soft: #15281d;
+    --warn: #e0a54a;
+    --warn-soft: #2b2214;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3 { font-family: "Space Grotesk", Inter, sans-serif; letter-spacing: -0.02em; margin: 0; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-family: "Space Grotesk"; font-weight: 700; text-decoration: none; font-size: 18px; }
+  .brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 22px; align-items: center; font-size: 14px; }
+  .nav-links a { text-decoration: none; color: var(--muted); }
+  .nav-links a:hover { color: var(--text); }
+  .theme-toggle {
+    border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+    width: 34px; height: 34px; border-radius: 8px; cursor: pointer; font-size: 15px;
+  }
+
+  /* Hero */
+  .hero { padding: 96px 0 72px; position: relative; overflow: hidden; }
+  .hero::before {
+    /* faint drafting grid — a nod to engineering paper */
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at 70% 30%, #000 0%, transparent 65%);
+    opacity: .6;
+  }
+  .eyebrow { color: var(--accent); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; }
+  .hero h1 { font-size: clamp(26px, 3.5vw, 38px); line-height: 1.15; margin: 14px 0 22px; }
+  .hero p.lede { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 620px; margin: 0 0 32px; }
+  /* align-items: start puts the photo's top edge level with the eyebrow line */
+  .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 56px; align-items: start; }
+  .portrait { margin: 2px 80px 0 0; position: relative; width: 170px; }
+  /* offset accent frame behind the photo */
+  .portrait::before {
+    content: ""; position: absolute; inset: 0; transform: translate(8px, 8px);
+    border: 2px solid var(--accent); border-radius: 12px; opacity: .6;
+  }
+  .portrait img {
+    position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top;
+    border-radius: 12px; box-shadow: var(--shadow);
+  }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 18px; border-radius: 10px; font-size: 15px; font-weight: 500;
+    text-decoration: none; border: 1px solid var(--border); background: var(--surface);
+    transition: transform .15s, border-color .15s;
+  }
+  .btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn svg { width: 16px; height: 16px; }
+  .stats { display: flex; gap: 40px; margin-top: 56px; flex-wrap: wrap; }
+  .stat b { display: block; font-family: "Space Grotesk"; font-size: 28px; }
+  .stat span { color: var(--faint); font-size: 13px; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
+  .section-head h2 { font-size: clamp(28px, 4vw, 38px); }
+  .section-head p { color: var(--muted); margin: 6px 0 0; max-width: 520px; }
+
+  /* Project cards */
+  .projects { display: grid; gap: 28px; }
+  .project {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+    overflow: hidden; box-shadow: var(--shadow);
+  }
+  .project { display: flex; flex-direction: column; }
+  /* description first, screenshots below */
+  .media { background: #0d0d0d; order: 2; }
+  .shot {
+    position: relative; display: block; width: 100%; aspect-ratio: 2 / 1;
+    background: #0d0d0d; cursor: zoom-in; border: 0; padding: 0;
+  }
+  /* contain, not cover: screenshots are ~2:1 so they fill the frame without losing their side panels */
+  .shot img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .thumbs { display: flex; gap: 10px; padding: 12px 14px; border-top: 1px solid #222; overflow-x: auto; }
+  .thumb {
+    flex: 0 0 auto; width: 132px; aspect-ratio: 2 / 1; padding: 0; cursor: pointer;
+    background: #000; border: 2px solid transparent; border-radius: 8px; overflow: hidden;
+    opacity: .55; transition: opacity .15s, border-color .15s;
+  }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
+  .thumb:hover { opacity: .85; }
+  .thumb.active { opacity: 1; border-color: var(--accent); }
+  .thumb-caption { color: #9a9ca1; font-size: 13px; padding: 0 16px 12px; min-height: 1.6em; }
+  .shot .zoom-hint {
+    position: absolute; right: 12px; bottom: 12px; font-size: 12px; color: #fff;
+    background: rgba(0, 0, 0, .55); padding: 4px 9px; border-radius: 6px; opacity: 0; transition: opacity .2s;
+  }
+  .shot:hover .zoom-hint { opacity: 1; }
+  .project-body {
+    padding: 30px 34px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 44px;
+  }
+  .project-body .intro, .project-body .detail { display: flex; flex-direction: column; }
+  .badges { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: 99px; }
+  .badge.live { color: var(--live); background: var(--live-soft); }
+  .badge.local { color: var(--accent); background: var(--accent-soft); }
+  .badge.internal { color: var(--warn); background: var(--warn-soft); }
+  .project h3 { font-size: 26px; margin-bottom: 8px; }
+  .project .summary { color: var(--muted); margin: 0 0 18px; }
+  .features { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 8px; font-size: 15px; }
+  .features li { padding-left: 22px; position: relative; }
+  .features li::before {
+    content: ""; position: absolute; left: 2px; top: 9px; width: 8px; height: 8px;
+    border: 2px solid var(--accent); border-radius: 50%;
+  }
+  .stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+  .stack span {
+    font-family: "JetBrains Mono"; font-size: 12px; color: var(--muted);
+    border: 1px solid var(--border); background: var(--surface-alt); padding: 2px 8px; border-radius: 6px;
+  }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+  .note { font-size: 13px; color: var(--faint); margin-top: 10px; }
+  .degrees { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; }
+  .degrees li { display: flex; align-items: center; gap: 12px; }
+  .degrees img { width: 32px; height: 32px; object-fit: contain; flex-shrink: 0; }
+
+  /* In progress */
+  .wip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .wip {
+    border: 1px dashed var(--border); border-radius: 16px; padding: 26px; background: var(--surface);
+  }
+  .wip h3 { font-size: 20px; margin: 10px 0 6px; }
+  .wip p { color: var(--muted); margin: 0 0 14px; font-size: 15px; }
+
+  /* About */
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .about p { color: var(--muted); margin: 0 0 16px; }
+  .skills { display: grid; gap: 14px; }
+  .skill { border-left: 2px solid var(--accent); padding: 2px 0 2px 16px; }
+  .skill b { display: block; font-family: "Space Grotesk"; font-size: 17px; }
+  .skill span { color: var(--muted); font-size: 14px; }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--faint); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* Lightbox */
+  dialog {
+    border: 0; padding: 0; background: transparent; max-width: 94vw; max-height: 92vh;
+  }
+  dialog::backdrop { background: rgba(0, 0, 0, .8); }
+  dialog img { max-width: 94vw; max-height: 88vh; border-radius: 10px; display: block; }
+  dialog figcaption { color: #ddd; text-align: center; font-size: 14px; margin-top: 10px; }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 860px) {
+    .about, .wip-grid, .project-body, .hero-grid { grid-template-columns: 1fr; }
+    .hero-grid { gap: 40px; }
+    .portrait { width: 130px; margin-right: 0; }
+    .project-body { padding: 24px 20px; }
+    .thumb { width: 96px; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 16px; }
+    .nav-links a:not(.keep) { display: none; }
+    .hero { padding: 64px 0 48px; }
+    .stats { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Christian Hall<span>.</span></a>
+    <div class="nav-links">
+      <a href="#projects" class="keep">Projects</a>
+      <a href="#in-progress">In progress</a>
+      <a href="#about">About</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+   <div class="hero-text">
+    <div class="eyebrow mono">Design Engineer · Digital Tool Builder</div>
+    <h1>Engineering machines.<br>Building the tools to optimize them.</h1>
+    <p class="lede">Design engineer working on compact equipment and attachments. When the right tool doesn't exist, I build it: kinematic solvers, stability analysis, and the software that runs my own training.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#projects">See the projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/christian-hall28/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.3V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2s-2.25 1.5-2.25 3.1v6H9z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn" href="mailto:christianandrewhall@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Email
+      </a>
+    </div>
+   </div>
+    <figure class="portrait">
+      <img src="screenshots/profile.jpg" alt="Portrait of Christian Hall">
+    </figure>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <h2>Projects</h2>
+        <p>Tools built to solve real engineering problems, and one to solve a running problem.</p>
+      </div>
+    </div>
+    <div class="projects" id="projectList"></div>
+  </div>
+</section>
+
+<section id="in-progress" style="padding-top: 24px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <h2>In progress</h2>
+        <p>Work currently underway.</p>
+      </div>
+    </div>
+    <div class="wip-grid" id="wipList"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="reveal">
+      <h2 style="font-size: clamp(28px, 4vw, 38px); margin-bottom: 18px">About</h2>
+      <p>I'm a design engineer with 11 years of experience, currently in outdoor power equipment, working on compact utility loaders and attachments from concept through production. My work spans mechanical and hydraulic design, embedded controls, and increasingly the software that makes engineering faster.</p>
+      <p>I'm looking to contribute to mission-focused work where good engineering creates real impact — particularly in the developing world.</p>
+      <ul class="degrees">
+        <li><img src="screenshots/stolaf.png" alt="St. Olaf College logo">B.A. Physics, St. Olaf College</li>
+        <li><img src="screenshots/umn.svg" alt="University of Minnesota logo">M.S. Mechanical Engineering, University of Minnesota</li>
+      </ul>
+      <div class="cta-row" style="margin-top: 24px">
+        <a class="btn" href="https://www.linkedin.com/in/christian-hall28/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn" href="mailto:christianandrewhall@gmail.com">christianandrewhall@gmail.com</a>
+      </div>
+    </div>
+    <div class="skills reveal">
+      <div class="skill"><b>Mechanical &amp; hydraulic design</b><span>Linkages, structures, cylinder sizing, stability and tip analysis</span></div>
+      <div class="skill"><b>Embedded &amp; controls</b><span>Arduino, CAN bus (Kvaser), Danfoss PLUS1 controllers</span></div>
+      <div class="skill"><b>Software tools</b><span>React, Vite, Python, FastAPI, test-driven development</span></div>
+      <div class="skill"><b>Product development</b><span>Concept &amp; feasibility, cost targets, gate reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Christian Hall</span>
+    <span id="modeNote"></span>
+  </div>
+</footer>
+
+<dialog id="lightbox">
+  <figure style="margin:0">
+    <img id="lightboxImg" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</dialog>
+
+<script>
+  // To add an app: append an entry here. Every app gets the same buttons:
+  // `liveUrl` (bundled static demo) is shown to everyone; `localUrl` (full dev server)
+  // is added only when this page is opened on Christian's own machine.
+  const APPS = [
+    {
+      title: 'Linkage Designer',
+      summary: 'Synthesizes 4-bar, slider-crank, and hydraulic-cylinder linkages from target poses traced over a photo — then lets you fine-tune, analyze, and export the result.',
+      status: 'live',
+      statusLabel: 'Live demo',
+      images: [
+        { src: 'screenshots/linkage.jpg', caption: 'Solved 4-bar with ghost poses, a traced coupler-point path, and live pivot table' },
+        { src: 'screenshots/linkage-cad.jpg', caption: 'Linkage synthesized directly over a calibrated CAD image' },
+        { src: 'screenshots/linkage-gallery.jpg', caption: 'Ranked candidate gallery: angle error, transmission angle, link length' },
+      ],
+      features: [
+        'Calibrated photo tracing with per-pose angle requirements and packaging envelopes',
+        'True-pose solver ranks candidates by angle error, transmission angle, compactness, and speed consistency',
+        'Hinged mode sizes a buildable hydraulic cylinder (stroke, dead length, margins)',
+        'Drag-to-fine-tune pivots, dead-center and tolerance sensitivity checks',
+        'Three-page PDF engineering report and CSV export',
+      ],
+      stack: ['React 19', 'Vite', 'SVG', 'jsPDF', 'Vitest · 485 tests'],
+      liveUrl: 'linkage/',
+      localUrl: 'http://localhost:5180/',
+    },
+    {
+      title: 'Stability Analysis Tool',
+      summary: 'Real-time tipping-angle and stability analysis for compact utility loaders. Place attachments and loads, and see how the machine’s stability margins respond.',
+      status: 'live',
+      statusLabel: 'Live demo',
+      images: [
+        { src: 'screenshots/cg.jpg', caption: '2D heatmaps: forward and rear tip angle vs. frame CG offset on a Dingo TX 1000' },
+        { src: 'screenshots/cg-sensitivity.jpg', caption: 'Weight sensitivity: tip angle vs. component weight, with top-5 sensitivity ranking' },
+      ],
+      features: [
+        'Top-down and side views with live center-of-gravity and tip-line calculation',
+        'Weight-sensitivity curves and 2D stability heatmaps',
+        'Rated operating capacity check per ISO 14397-1',
+        'Nine machine configurations, CSV component import, PDF export',
+      ],
+      stack: ['React', 'Tailwind CSS', 'Vite', 'SVG'],
+      note: 'Built for internal engineering use at The Toro Company; shared here with permission.',
+      liveUrl: 'stability/',
+      localUrl: 'http://localhost:5173/',
+    },
+    {
+      title: 'Marathon Training Platform',
+      summary: 'My own coaching system: a periodized 21-week plan, automatic Strava imports, workout analysis, and AI feedback on every run — plus a daily plan email.',
+      status: 'live',
+      statusLabel: 'Live demo',
+      images: [
+        { src: 'screenshots/running.jpg', fit: 'cover', caption: 'Week-at-a-glance plan and today’s workout (Dusk theme)' },
+        { src: 'screenshots/running-art.jpg', caption: 'Running art: each route’s shape matched to a real-world image, plus HR zones and pace vs. plan' },
+        { src: 'screenshots/running-goggins.jpg', caption: 'Daylight theme with the “Goggins” coach persona: Claude grades each workout against the plan' },
+        { src: 'screenshots/running-email.jpg', caption: 'Automated daily email: weather, today’s run, strength, and the week ahead' },
+      ],
+      features: [
+        'Plan generator built from lab VO₂max and threshold data, with HR zones per workout',
+        'Strava OAuth sync with GPX reconstruction and pace / HR / elevation charts',
+        'AI coaching feedback on effort and execution via the Claude API',
+        'Automated daily email with the day’s run, strength, and fueling plan',
+      ],
+      stack: ['Python', 'FastAPI', 'JavaScript', 'Strava API', 'Claude API'],
+      note: 'The full app runs on a private server with live Strava and Claude access. The demo uses a snapshot of real runs with recorded AI responses.',
+      liveUrl: 'running/',
+      localUrl: 'http://localhost:5000/',
+    },
+  ]
+
+  const IN_PROGRESS = [
+    {
+      title: 'Modular Utility Vehicle Platform',
+      summary: 'New product development: a cost-reduced, modular compact-equipment lineup with swappable attachments. Concept & feasibility phase.',
+      stack: ['Product development', 'Cost engineering'],
+    },
+    {
+      title: 'Personal Finance Pipeline',
+      summary: 'Automated bank-statement ingestion and categorization feeding budget-vs-actual, savings-rate, and cash-flow dashboards — all processed locally.',
+      stack: ['Python', 'Pandas', 'Streamlit'],
+    },
+  ]
+
+  // Local launch buttons only make sense on the machine running the dev servers
+  const isLocal = location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname)
+
+  const escapeHtml = (text) => text.replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]))
+
+  function renderProject(app) {
+    const buttons = []
+    if (app.liveUrl) buttons.push(`<a class="btn primary" href="${app.liveUrl}" target="_blank" rel="noopener">Open live demo →</a>`)
+    if (isLocal && app.localUrl) buttons.push(`<a class="btn${app.liveUrl ? '' : ' primary'}" href="${app.localUrl}" target="_blank" rel="noopener">Launch locally ↗</a>`)
+    const [first] = app.images
+    const thumbs = app.images.length < 2 ? '' : `
+      <div class="thumbs">${app.images.map((img, i) => `
+        <button class="thumb${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Show: ${escapeHtml(img.caption)}">
+          <img src="${img.src}" alt="" loading="lazy">
+        </button>`).join('')}
+      </div>`
+    return `
+      <article class="project reveal" data-app="${escapeHtml(app.title)}">
+        <div class="media">
+          <button class="shot" aria-label="Enlarge ${escapeHtml(app.title)} screenshot">
+            <img class="main-img" src="${first.src}" alt="${escapeHtml(first.caption)}" loading="lazy" style="object-fit:${first.fit || 'contain'}; object-position: top">
+            <span class="zoom-hint">Click to enlarge</span>
+          </button>
+          ${thumbs}
+          <div class="thumb-caption">${first.caption}</div>
+        </div>
+        <div class="project-body">
+          <div class="intro">
+            <div class="badges"><span class="badge ${app.status}">${app.statusLabel}</span></div>
+            <h3>${app.title}</h3>
+            <p class="summary">${app.summary}</p>
+            <div class="stack">${app.stack.map((s) => `<span>${s}</span>`).join('')}</div>
+            <div class="actions">${buttons.join('')}</div>
+            ${app.note ? `<div class="note">${app.note}</div>` : ''}
+          </div>
+          <div class="detail">
+            <ul class="features">${app.features.map((f) => `<li>${f}</li>`).join('')}</ul>
+          </div>
+        </div>
+      </article>`
+  }
+
+  function renderWip(item) {
+    return `
+      <div class="wip reveal">
+        <span class="badge internal">In progress</span>
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+        <div class="stack" style="margin:0">${item.stack.map((s) => `<span>${s}</span>`).join('')}</div>
+      </div>`
+  }
+
+  document.getElementById('projectList').innerHTML = APPS.map(renderProject).join('')
+  document.getElementById('wipList').innerHTML = IN_PROGRESS.map(renderWip).join('')
+  if (isLocal) document.getElementById('modeNote').textContent = 'Local mode · launch buttons enabled'
+
+  // Thumbnails swap the main image; clicking the main image opens it in the lightbox
+  const lightbox = document.getElementById('lightbox')
+  document.querySelectorAll('.project').forEach((card) => {
+    const app = APPS.find((a) => a.title === card.dataset.app)
+    const mainImg = card.querySelector('.main-img')
+    const caption = card.querySelector('.thumb-caption')
+    card.querySelectorAll('.thumb').forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        const picked = app.images[+thumb.dataset.index]
+        mainImg.src = picked.src
+        mainImg.alt = picked.caption
+        // narrower-than-2:1 shots opt into 'cover' to avoid side bars
+        mainImg.style.objectFit = picked.fit || 'contain'
+        caption.textContent = picked.caption
+        card.querySelectorAll('.thumb').forEach((t) => t.classList.toggle('active', t === thumb))
+      })
+    })
+    card.querySelector('.shot').addEventListener('click', () => {
+      document.getElementById('lightboxImg').src = mainImg.src
+      document.getElementById('lightboxCaption').textContent = `${app.title} — ${caption.textContent}`
+      lightbox.showModal()
+    })
+  })
+  lightbox.addEventListener('click', () => lightbox.close())
+
+  // Theme toggle, remembered per browser
+  const root = document.documentElement
+  try {
+    const saved = localStorage.getItem('theme')
+    if (saved) root.dataset.theme = saved
+  } catch (err) { /* storage unavailable — fall back to system theme */ }
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const systemDark = matchMedia('(prefers-color-scheme: dark)').matches
+    const current = root.dataset.theme || (systemDark ? 'dark' : 'light')
+    root.dataset.theme = current === 'dark' ? 'light' : 'dark'
+    try { localStorage.setItem('theme', root.dataset.theme) } catch (err) { /* ignore */ }
+  })
+
+  // Reveal sections as they scroll into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); observer.unobserve(entry.target) }
+    })
+  }, { threshold: 0.12 })
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+</script>
+</body>
+</html>
